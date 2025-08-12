@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /includes/
+Disallow: /config/
+Disallow: /login.php
+Disallow: /logout.php
+Disallow: /admin/
+Disallow: /admin/create
+Disallow: /admin/manage
+Disallow: /admin/edit/
+# Disallow search results page if you don't want it indexed (good practice)
+Disallow: /search
+# Disallow specific tool subpages if they shouldn't be indexed individually
+# Disallow: /tools?tool=compound_interest # Example - might need more specific rules
+
+# Allow crawling of everything else (implicitly allowed, but can be explicit)
+Allow: /
+
+# Specify the location of your sitemap (Create sitemap.xml later)
+Sitemap: https://atlasandnavigator.site/sitemap.xml

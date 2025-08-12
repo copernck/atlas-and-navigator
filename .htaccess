@@ -1,0 +1,51 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Set environment variable if needed (e.g., for production vs dev)
+# SetEnv APP_ENV production
+
+# Redirect Trailing Slashes (optional, good for SEO)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# ** ADDED: Explicitly stop processing for login.php **
+# If the request is exactly for login.php, don't apply further rules in this block
+RewriteRule ^login\.php$ - [L]
+
+# Handle Front Controller (redirect all non-file/dir requests to index.php)
+# This allows for cleaner URLs like yourdomain.com/blog
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+# Basic Security Headers (optional but recommended)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Header set Content-Security-Policy "default-src 'self';" # CSP is complex, configure carefully
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Deny access to sensitive files
+<FilesMatch "(\.(env|log|bak|config|sql|fla|psd|ini|yml|yaml)|~)$">
+    Require all denied
+</FilesMatch>
+# Protect config and include files containing sensitive info
+<Files config.php>
+    Require all denied
+</Files>
+<Files database.php>
+    Require all denied
+</Files>
+# Allow login.php to be accessed directly (it has its own security)
+# <Files login.php>
+#    Require all granted
+# </Files>
+
+# PHP settings (if needed and allowed by DreamHost's Apache config)
+# php_value upload_max_filesize 64M
+# php_value post_max_size 64M
+

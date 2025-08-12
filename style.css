@@ -1,0 +1,64 @@
+/* /css/style.css - Add these rules at the end, or merge with existing .prose rules */
+
+/* Base styles for prose content to handle wrapping */
+.prose {
+  overflow-wrap: break-word; /* Allow breaking long words/strings to prevent overflow */
+  word-wrap: break-word;     /* Legacy fallback for overflow-wrap */
+  word-break: break-word;  /* More aggressive breaking if needed (can break mid-word) */
+  /* Consider adding hyphens for better appearance if needed, requires lang attribute on <html> */
+  /* hyphens: auto; */
+}
+
+/* Ensure images within prose content scale down */
+.prose img {
+  max-width: 100%; /* Make sure images don't exceed container width */
+  height: auto;   /* Maintain aspect ratio */
+}
+
+/* Make tables within prose content horizontally scrollable on small screens */
+.prose table {
+  display: block; /* Allows overflow properties to work correctly */
+  max-width: fit-content; /* Optional: keep table width contained */
+  overflow-x: auto; /* Add horizontal scrollbar if table is wider than container */
+  white-space: nowrap; /* Prevent text wrapping inside table cells */
+  margin-left: auto; /* Optional: center the table block */
+  margin-right: auto; /* Optional: center the table block */
+}
+/* Add some visual indication for scrollable tables */
+.prose table::-webkit-scrollbar {
+    height: 6px;
+}
+.prose table::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* Tailwind gray-300 */
+    border-radius: 3px;
+}
+.prose table::-webkit-scrollbar-track {
+    background-color: #f1f5f9; /* Tailwind gray-100 */
+}
+
+
+/* Handle preformatted text (code blocks) overflow */
+.prose pre {
+  overflow-x: auto; /* Ensure horizontal scrollbar */
+  /* Keep wrapping commented unless scrolling is insufficient */
+  /* white-space: pre-wrap; */
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
+}
+
+/* Ensure code inside pre blocks doesn't force weird wrapping */
+.prose pre code {
+   white-space: pre; /* Let the <pre> handle wrapping/scrolling */
+   word-break: normal; /* Prevent code itself from breaking mid-word */
+}
+
+/* Optional: Target specific elements if applying word-break to .prose is too aggressive */
+/*
+.prose p, .prose li, .prose a, .prose blockquote {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+*/
+
+/* --- End Added/Updated Rules --- */
