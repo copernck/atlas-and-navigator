@@ -1,6 +1,6 @@
 Atlas & Navigator - A Full-Stack Blog Platform
 
-(atlas-and-navigator/okaythis.png)
+"(atlas-and-navigator/okaythis.png"
 
 **Atlas & Navigator** is a complete, database-driven blog and content platform built from the ground up with PHP and MySQL Along with html css JavaScript. This project was an exercise in creating a dynamic website without relying on a traditional CMS like WordPress, focusing on clean code, security, and a custom-built administrative backend.
 
