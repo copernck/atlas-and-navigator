@@ -12,8 +12,8 @@ ini_set('display_errors', 1);
 define('SITE_NAME', 'Atlas & Navigator'); // Or your final site name
 define('BASE_URL', ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST']));
 
-// ** IMPORTANT: REPLACE WITH YOUR ACTUAL DREAMHOST MYSQL DETAILS !! **
-define('DB_HOST', 'urhereexample'); // Check DreamHost Panel (e.g., 'mysql.yourdomain.com' or 'localhost')
+// ** IMPORTANT: REPLACE WITH YOUR ACTUAL DREAMHOST MYSQL DETAILS !! btw you can use any panel you want in my case i used db **
+define('DB_HOST', 'urhereexample'); //  (e.g., 'mysql.yourdomain.com' or 'localhost')
 define('DB_NAME', 'examplename'); // The DB name you created
 define('DB_USER', 'whateverisit'); // The DB user you created
 define('DB_PASS', 'examplepassabcdidontknow'); // The password for that DB user
