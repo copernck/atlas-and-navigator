@@ -52,12 +52,12 @@ $navItems = [ /* ... (nav items as before) ... */
 
     <?php // ** GOOGLE ADSENSE AUTO ADS CODE SNIPPET ** ?>
     <?php // Make sure your actual AdSense snippet is pasted here ?>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-51227276151666634"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234"
          crossorigin="anonymous"></script>
     <?php // ** END GOOGLE ADSENSE CODE SNIPPET ** ?>
 
     <?php // ** YOUR GOOGLE SEARCH CONSOLE VERIFICATION META TAG ** ?>
-    <meta name="google-site-verification" content="OhvkxUvWk1EgtjU0KjgpVQEHXyQZ4kxA8Dh_jf2phfQ" />
+    <meta name="google-site-verification" content="cjbdbjcjdcbjdbdchjdhchjdbgblahblah" />
     <?php // ** END GOOGLE SEARCH CONSOLE META TAG ** ?>
 
 </head>
