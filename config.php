@@ -13,15 +13,15 @@ define('SITE_NAME', 'Atlas & Navigator'); // Or your final site name
 define('BASE_URL', ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST']));
 
 // ** IMPORTANT: REPLACE WITH YOUR ACTUAL DREAMHOST MYSQL DETAILS !! **
-define('DB_HOST', 'dicksonatuserat.atlasandnavigator.site'); // Check DreamHost Panel (e.g., 'mysql.yourdomain.com' or 'localhost')
-define('DB_NAME', 'atlas_giveme_quest'); // The DB name you created
-define('DB_USER', 'dicksonat_userat'); // The DB user you created
-define('DB_PASS', 'N93i^@*vwhy7@^hdhy38##$'); // The password for that DB user
-define('DB_CHARSET', 'utf8mb4'); // Use utf8mb4 for broader character support
+define('DB_HOST', 'urhereexample'); // Check DreamHost Panel (e.g., 'mysql.yourdomain.com' or 'localhost')
+define('DB_NAME', 'examplename'); // The DB name you created
+define('DB_USER', 'whateverisit'); // The DB user you created
+define('DB_PASS', 'examplepassabcdidontknow'); // The password for that DB user
+define('DB_CHARSET', 'whayever'); // Use utf8mb4 for broader character support
 
 // start session if needed globally - must be before any HTML output
 // ensure this file has NO whitespace or text before <?php
 session_start();
 
 // ** NO closing  tag here AND ABSOLUTELY NO OTHER TEXT OR BLANK LINES BEFORE OR AFTER THE PHP CODE **
-// This prevents "headers already sent" errors caused by stray output.
+// This prevents "headers already sent" errors caused by stray output. ####i must remember this i forget this one time before
